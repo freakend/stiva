@@ -627,7 +627,7 @@ export default function App() {
             role="region"
             aria-label={activeControl ? `${activeControl} picker` : undefined}
             className={[
-              'absolute bottom-full left-0 right-0 z-20 bg-[#FFFBF5] border-t border-[#E8E5DE] rounded-t-2xl shadow-[0_-12px_32px_rgba(45,46,38,0.14)] px-5 pt-4 pb-4',
+              'absolute bottom-full left-0 right-0 z-20 bg-[#FFFBF5] border-t border-[#E8E5DE] rounded-t-2xl shadow-[0_-12px_32px_rgba(45,46,38,0.14)] px-5 pt-4 pb-[calc(1rem+env(safe-area-inset-bottom))]',
               'transition-all will-change-transform',
               activeControl
                 ? 'translate-y-0 opacity-100 pointer-events-auto'
@@ -748,7 +748,7 @@ export default function App() {
           </div>
 
           {/* Bottom toolbar: semua seragam, icon di atas, title di bawah, tanpa card, ukuran icon konsisten */}
-          <div className="relative z-30 flex items-stretch justify-between gap-1 px-2 py-2 pb-3 bg-[#FFFBF5] overflow-x-auto no-scrollbar">
+          <div className="relative z-30 flex items-stretch justify-between gap-1 overflow-x-auto bg-[#FFFBF5] px-2 pt-2 no-scrollbar" style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}>
             {[
               {
                 kind: 'action' as const,

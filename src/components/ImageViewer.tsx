@@ -239,7 +239,7 @@ export function ImageViewer({ cellId, image, aspect, onApply, onReplace, onClose
         </p>
 
         {/* actions */}
-        <div className="flex w-full items-center justify-between gap-3 border-t border-[#E8E5DE] bg-white px-4 py-4 sm:px-6 rounded-b-[20px]">
+        <div className="flex w-full items-center justify-between gap-3 border-t border-[#E8E5DE] bg-white px-4 pt-4 sm:px-6 rounded-b-[20px]" style={{ paddingBottom: 'calc(1rem + env(safe-area-inset-bottom))' }}>
           <label className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-[#E8E5DE] bg-white px-4 py-2 text-[13px] font-semibold text-[#2D2E26] hover:bg-[#FFFBF5]">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
               <path d="M12 5v14M5 12h14" />
