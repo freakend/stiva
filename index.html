@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#FFFBF5" />
+
+    <title>Stiva: Private Browser Collage Maker</title>
+    <meta name="title" content="Stiva: Private Browser Collage Maker" />
+    <meta
+      name="description"
+      content="Stiva is a private collage maker that runs in your browser. Stack and arrange photos in multiple ratios, crop with pan and zoom, and export up to 3000px PNG. No upload, no account."
+    />
+    <meta
+      name="keywords"
+      content="photo collage, collage maker, browser collage maker, photo stack, image stacker, private collage maker, photo grid, offline collage"
+    />
+    <meta name="author" content="Stiva" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://stiva.imbe.net/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Stiva" />
+    <meta property="og:title" content="Stiva: Private Browser Collage Maker" />
+    <meta
+      property="og:description"
+      content="Stack and put together pictures to collage in your browser. Pan and zoom each cell, export up to 3000px PNG. Everything stays local."
+    />
+    <meta property="og:url" content="https://stiva.imbe.net/" />
+    <meta property="og:image" content="https://stiva.imbe.net/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Stiva collage preview with photos arranged in a grid" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Stiva: Private Browser Collage Maker" />
+    <meta
+      name="twitter:description"
+      content="Stack and arrange photos in multiple ratios, crop with pan and zoom, export up to 3000px PNG. Private and local, no upload."
+    />
+    <meta name="twitter:image" content="https://stiva.imbe.net/og-image.png" />
+    <meta name="twitter:image:alt" content="Stiva collage preview with photos arranged in a grid" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Stiva",
+        "url": "https://stiva.imbe.net/",
+        "description": "Private browser collage maker and photo stacker. Arrange photos in multiple ratios, crop with pan and zoom, and export up to 3000px PNG. Everything stays in your browser.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "keywords": "photo collage, collage maker, photo stack, browser collage"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // PWA: jangan register di dev (localhost), biar HMR nggak ke-intercept dan nggak dino tiap save
+      ;(function () {
+        var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+        if (!('serviceWorker' in navigator) || isLocal) {
+          // bersihkan SW lama yang nyangkut di dev
+          if (isLocal && 'serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (regs) {
+              regs.forEach(function (r) {
+                r.unregister()
+              })
+            })
+            if (window.caches)
+              caches.keys().then(function (keys) {
+                keys.forEach(function (k) {
+                  caches.delete(k)
+                })
+              })
+          }
+          return
+        }
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').catch(function () {})
+        })
+      })()
+    </script>
+    <noscript>
+      <div
+        style="
+          max-width: 640px;
+          margin: 40px auto;
+          padding: 24px;
+          font-family:
+            Space Grotesk,
+            system-ui,
+            sans-serif;
+          color: #2d2e26;
+          background: #fffbf5;
+          border: 1px solid #e8e5de;
+          border-radius: 16px;
+        "
+      >
+        <h1 style="font-size: 22px; font-weight: 700; margin: 0 0 8px">Stiva: Private Browser Collage Maker</h1>
+        <p style="margin: 0; line-height: 1.6; color: #6b6b63">
+          Stack and put together pictures to collage. Arrange photos in multiple ratios, crop with pan and zoom, and
+          export up to 3000px PNG. Enable JavaScript to use the app. Everything stays in your browser, no upload.
+        </p>
+      </div>
+    </noscript>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-cream: #f4f1ea;
+  --color-sidebar: #fffbf5;
+  --color-card-border: #e8e5de;
+  --color-ink: #2d2e26;
+  --color-ink-muted: #6b6b63;
+  --color-ink-subtle: #9a9a93;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+* {
+  font-variant-ligatures: common-ligatures;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-display);
+  background: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Consistent keyboard focus indicator */
+:focus-visible {
+  outline: 2px solid #2d2e26;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Custom scrollbar for sidebar */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #e8e5de;
+  border-radius: 999px;
+}
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #e8e5de transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
