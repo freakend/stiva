@@ -1,21 +1,28 @@
 <div align="center">
 
-# stiva
+# Stiva
 
 **Arrange photos into collages. Your computer does it all.**
 
-Stiva is a browser-based collage maker that runs entirely on-device. Pick a
-ratio and photo count, drop in pictures, adjust each crop with pan and zoom,
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript)](https://typescriptlang.org)
+[![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite)](https://vitejs.dev)
+
+[Live app](https://stiva.imbe.net) · [Report Bug](https://github.com/freakend/stiva/issues) · [Request Feature](https://github.com/freakend/stiva/issues)
+
+<p align="center">
+Stiva is a browser-based collage maker that runs entirely on-device.<br>
+Pick a ratio and photo count, drop in pictures, adjust each crop with pan and zoom,<br>
 then export a PNG up to 3000px on the long edge.
+</p>
 
-Built with React, TypeScript, Vite, and Tailwind. No accounts, no uploads,
-no tracking.
-
-Made by [Imbe](https://imbe.net)
-
-[MIT License](./LICENSE)
+No accounts. No uploads. No tracking. Everything stays in your browser.
 
 </div>
+
+---
 
 ## Why Stiva
 
