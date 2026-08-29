@@ -552,7 +552,7 @@ export default function App() {
                         onSwap={swapCells}
                         onClear={handleClear}
                         onPick={handlePick}
-                        onAddClick={() => globalAddRef.current?.click()}
+                        onAddClick={c.image ? undefined : () => globalAddRef.current?.click()}
                         draggable={cells.some(x => !!x.image)}
                         isTop={isTop}
                         isLeft={isLeft}

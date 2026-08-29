@@ -183,14 +183,15 @@ export function ImageViewer({ cellId, image, aspect, onApply, onReplace, onClose
 
   return (
     <div
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#1A1A18]/75 backdrop-blur-[2px] p-4 sm:p-6"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-[#1A1A18]/75 backdrop-blur-[2px] sm:items-center sm:p-6"
       onClick={onClose}
     >
-      {/* card */}
+      {/* card - bottom sheet on mobile, centered on desktop */}
       <div
-        className="relative flex w-full max-w-[920px] flex-col items-center rounded-[20px] bg-[#FFFBF5] shadow-[0_20px_60px_rgba(0,0,0,0.35)] border border-white/20"
+        className="relative flex max-h-[86dvh] w-full flex-col items-center overflow-auto rounded-t-[20px] border border-white/20 bg-[#FFFBF5] shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:max-h-none sm:max-w-[920px] sm:overflow-visible sm:rounded-[20px]"
         onClick={e => e.stopPropagation()}
       >
+        <div className="mt-2 h-1 w-9 shrink-0 rounded-full bg-[#E8E5DE] sm:hidden" />
         {/* header */}
         <div className="flex w-full items-center justify-between px-5 py-4 sm:px-6">
           <p className="text-[11px] font-mono tracking-[0.14em] text-[#9A9A93]">EDIT CROP</p>

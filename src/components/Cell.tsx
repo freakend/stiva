@@ -69,14 +69,14 @@ export function Cell({
       }}
       onClick={() => {
         if (isDragging) return
-        if (onAddClick) onAddClick()
-        else if (cell.image) onFocus(cell.id)
+        if (cell.image) onFocus(cell.id)
+        else if (onAddClick) onAddClick()
       }}
       onKeyDown={e => {
         if (e.key !== 'Enter' && e.key !== ' ') return
         e.preventDefault()
-        if (onAddClick) onAddClick()
-        else if (cell.image) onFocus(cell.id)
+        if (cell.image) onFocus(cell.id)
+        else if (onAddClick) onAddClick()
       }}
       role="button"
       tabIndex={0}
