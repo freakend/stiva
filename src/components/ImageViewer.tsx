@@ -194,11 +194,11 @@ export function ImageViewer({ cellId, image, aspect, onApply, onReplace, onClose
         <div className="mt-2 h-1 w-9 shrink-0 rounded-full bg-[#E8E5DE] sm:hidden" />
         {/* header */}
         <div className="flex w-full items-center justify-between px-5 py-4 sm:px-6">
-          <p className="text-[11px] font-mono tracking-[0.14em] text-[#9A9A93]">EDIT CROP</p>
+          <p className="text-[11px] font-mono tracking-[0.14em] text-[#6B6B63]">EDIT CROP</p>
           <button
             type="button"
             onClick={onClose}
-            className="grid h-8 w-8 place-items-center rounded-full border border-[#E8E5DE] bg-white text-[#9A9A93] hover:text-[#2D2E26]"
+            className="grid h-8 w-8 place-items-center rounded-full border border-[#E8E5DE] bg-white text-[#6B6B63] hover:text-[#2D2E26]"
             aria-label="Close"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -234,7 +234,7 @@ export function ImageViewer({ cellId, image, aspect, onApply, onReplace, onClose
           </div>
         </div>
 
-        <p className="px-4 pb-3 pt-2 text-center text-[11px] font-mono tracking-wide text-[#9A9A93]">
+        <p className="px-4 pb-3 pt-2 text-center text-[11px] font-mono tracking-wide text-[#6B6B63]">
           Drag to pan · pinch or scroll to zoom
         </p>
 

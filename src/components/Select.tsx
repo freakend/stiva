@@ -61,7 +61,7 @@ export function Select({
         </span>
         <span className="flex-1">{selected.label}</span>
         <span
-          className={`pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[#9A9A93] transition-transform ${open ? 'rotate-180' : ''}`}
+          className={`pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[#6B6B63] transition-transform ${open ? 'rotate-180' : ''}`}
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
             <path d="M6 9l6 6 6-6" />

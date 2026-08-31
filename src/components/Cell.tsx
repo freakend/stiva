@@ -167,7 +167,7 @@ export function Cell({
               viewBox="0 0 48 48"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="text-[#C4C0B3] group-hover:text-[#9A9A93] transition-colors"
+              className="text-[#C4C0B3] group-hover:text-[#6B6B63] transition-colors"
             >
               <path
                 d="M29.4995,12.3739c.7719-.0965,1.5437,.4824,1.5437,1.2543h0l2.5085,23.8312c.0965,.7719-.4824,1.5437-1.2543,1.5437l-23.7347,2.5085c-.7719,.0965-1.5437-.4824-1.5437-1.2543h0l-2.5085-23.7347c-.0965-.7719,.4824-1.5437,1.2543-1.5437l23.7347-2.605Z"

@@ -278,7 +278,7 @@ export default function App() {
                 <div>
                   <div className="flex items-baseline gap-2">
                     <span className="text-[28px] font-bold tracking-[-0.03em]">stiva</span>
-                    <span className="text-[11px] font-mono tracking-widest text-[#9A9A93]">v1.0</span>
+                    <span className="text-[11px] font-mono tracking-widest text-[#6B6B63]">v1.0</span>
                   </div>
                   <p className="mt-1 text-[13px] leading-[1.5] text-[#6B6B63]">
                     Put together pictures to collage.
@@ -286,29 +286,19 @@ export default function App() {
                     All processing stays in your browser.
                   </p>
                 </div>
-                <span
-                  className="mt-1 grid h-8 w-8 place-items-center rounded-full border border-[#E8E5DE] bg-white text-[#9A9A93]"
-                  title="Light mode"
-                  aria-label="Light mode"
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-                    <circle cx="12" cy="12" r="4" />
-                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
-                  </svg>
-                </span>
               </div>
             </div>
 
             <div className="flex flex-1 flex-col space-y-4 overflow-visible px-4 pb-6 min-h-0 lg:overflow-visible">
               {/* CANVAS */}
               <section className="rounded-2xl border border-[#E8E5DE] bg-white p-4">
-                <h2 className="text-[11px] font-semibold tracking-[0.14em] text-[#9A9A93]">CANVAS</h2>
+                <h2 className="text-[11px] font-semibold tracking-[0.14em] text-[#6B6B63]">CANVAS</h2>
 
                 <div className="mt-3 space-y-3">
                   <div>
                     <div className="mb-1.5 flex items-baseline gap-1.5">
                       <label className="text-[12px] font-medium text-[#6B6B63]">Ratio</label>
-                      <span className="text-[11px] font-mono text-[#9A9A93]">
+                      <span className="text-[11px] font-mono text-[#6B6B63]">
                         ({ratio.label} · {dimLabel} export)
                       </span>
                     </div>
@@ -364,7 +354,7 @@ export default function App() {
                   <div>
                     <div className="mb-1.5 flex items-center justify-between">
                       <label className="text-[12px] font-medium text-[#6B6B63]">Gap</label>
-                      <span className="text-[11px] font-mono text-[#9A9A93]">{gap}px</span>
+                      <span className="text-[11px] font-mono text-[#6B6B63]">{gap}px</span>
                     </div>
                     <input
                       type="range"
@@ -375,7 +365,7 @@ export default function App() {
                       onChange={e => setGap(Number(e.target.value))}
                       className="h-1 w-full appearance-none rounded-full bg-[#EDE9E0] accent-[#2D2E26]"
                     />
-                    <div className="mt-1 flex justify-between text-[11px] font-mono text-[#B8B4A8]">
+                    <div className="mt-1 flex justify-between text-[11px] font-mono text-[#6B6B63]">
                       <span>0</span>
                       <span>24</span>
                     </div>
@@ -412,21 +402,21 @@ export default function App() {
                     </>
                   )}
                 </button>
-                <p className="mt-2 text-center text-[11px] text-[#9A9A93]">
+                <p className="mt-2 text-center text-[11px] text-[#6B6B63]">
                   Everything is processed locally in your browser
                 </p>
               </section>
 
               {/* ABOUT */}
               <section className="rounded-2xl border border-[#E8E5DE] bg-[#FFFBF5] px-4 pt-4 pb-2 flex flex-1 flex-col min-h-0 overflow-hidden">
-                <h2 className="text-[11px] font-semibold tracking-[0.14em] text-[#9A9A93] shrink-0">ABOUT</h2>
+                <h2 className="text-[11px] font-semibold tracking-[0.14em] text-[#6B6B63] shrink-0">ABOUT</h2>
                 <div className="mt-2 flex-1 min-h-0 overflow-auto pr-1 sidebar-scroll">
                   <p className="text-[12.5px] leading-relaxed text-[#6B6B63]">
                     <span className="font-semibold text-[#2D2E26]">Stiva</span> from Greek{' '}
                     <span className="font-mono text-[#2D2E26]">στοιβάζω</span> (<em>stoivazō</em>): to pile up, pack
                     together, arrange neatly.
                   </p>
-                  <p className="mt-2 text-[11px] font-mono text-[#9A9A93]">
+                  <p className="mt-2 text-[11px] font-mono text-[#6B6B63]">
                     stoicheō · στοιχήσω, ἐστοίχησα: “to align, to compile together”
                   </p>
                 </div>
@@ -580,10 +570,10 @@ export default function App() {
 
           {/* bottom bar (desktop only, mobile uses sheet) */}
           <div className="hidden lg:flex items-center justify-between gap-4 px-6 pb-6">
-            <p className="text-[11px] font-mono tracking-wide text-[#9A9A93]">
+            <p className="text-[11px] font-mono tracking-wide text-[#6B6B63]">
               Click photo to crop · Drag to swap · <span className="text-[#6B6B63]">Export keeps your crop</span>
             </p>
-            <p className="shrink-0 text-[11px] font-mono tracking-wide text-[#9A9A93]">
+            <p className="shrink-0 text-[11px] font-mono tracking-wide text-[#6B6B63]">
               made with love by{' '}
               <a
                 href="https://imbe.net"
@@ -641,8 +631,8 @@ export default function App() {
             {activeControl === 'ratio' && (
               <div>
                 <div className="mb-2 flex items-baseline justify-between">
-                  <span className="text-[11px] font-semibold tracking-[0.12em] text-[#9A9A93] uppercase">Ratio</span>
-                  <span className="text-[11px] font-mono text-[#9A9A93]">
+                  <span className="text-[11px] font-semibold tracking-[0.12em] text-[#6B6B63] uppercase">Ratio</span>
+                  <span className="text-[11px] font-mono text-[#6B6B63]">
                     {ratio.label} · {dimLabel}
                   </span>
                 </div>
@@ -672,8 +662,8 @@ export default function App() {
             {activeControl === 'photos' && (
               <div>
                 <div className="mb-2 flex items-baseline justify-between">
-                  <span className="text-[11px] font-semibold tracking-[0.12em] text-[#9A9A93] uppercase">Photos</span>
-                  <span className="text-[11px] font-mono text-[#9A9A93]">{count} photos</span>
+                  <span className="text-[11px] font-semibold tracking-[0.12em] text-[#6B6B63] uppercase">Photos</span>
+                  <span className="text-[11px] font-mono text-[#6B6B63]">{count} photos</span>
                 </div>
                 <div className="flex rounded-full bg-[#EDE9E0] p-1 gap-1">
                   {PHOTO_OPTIONS.map(n => {
@@ -698,10 +688,10 @@ export default function App() {
             {activeControl === 'orientation' && (
               <div>
                 <div className="mb-2 flex items-baseline justify-between">
-                  <span className="text-[11px] font-semibold tracking-[0.12em] text-[#9A9A93] uppercase">
+                  <span className="text-[11px] font-semibold tracking-[0.12em] text-[#6B6B63] uppercase">
                     Orientation
                   </span>
-                  <span className="text-[11px] font-mono text-[#9A9A93] capitalize">{orientation}</span>
+                  <span className="text-[11px] font-mono text-[#6B6B63] capitalize">{orientation}</span>
                 </div>
                 <div className="flex rounded-full bg-[#EDE9E0] p-1 gap-1">
                   {(['portrait', 'landscape'] as const).map(o => {
@@ -726,8 +716,8 @@ export default function App() {
             {activeControl === 'gap' && (
               <div>
                 <div className="mb-3 flex items-center justify-between">
-                  <span className="text-[11px] font-semibold tracking-[0.12em] text-[#9A9A93] uppercase">Gap</span>
-                  <span className="text-[11px] font-mono text-[#9A9A93]">{gap}px</span>
+                  <span className="text-[11px] font-semibold tracking-[0.12em] text-[#6B6B63] uppercase">Gap</span>
+                  <span className="text-[11px] font-mono text-[#6B6B63]">{gap}px</span>
                 </div>
                 <input
                   autoFocus
@@ -739,7 +729,7 @@ export default function App() {
                   onChange={e => setGap(Number(e.target.value))}
                   className="h-1 w-full appearance-none rounded-full bg-[#EDE9E0] accent-[#2D2E26]"
                 />
-                <div className="mt-1.5 flex justify-between text-[10px] font-mono text-[#B8B4A8]">
+                <div className="mt-1.5 flex justify-between text-[10px] font-mono text-[#6B6B63]">
                   <span>0</span>
                   <span>24</span>
                 </div>
@@ -894,7 +884,7 @@ export default function App() {
               <h2 className="text-[13px] font-bold text-[#2D2E26]">How it works</h2>
               <button
                 onClick={() => setInfoOpen(false)}
-                className="grid h-7 w-7 place-items-center rounded-full text-[#9A9A93] hover:bg-[#EDE9E0] hover:text-[#2D2E26]"
+                className="grid h-7 w-7 place-items-center rounded-full text-[#6B6B63] hover:bg-[#EDE9E0] hover:text-[#2D2E26]"
                 aria-label="Close"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -907,10 +897,10 @@ export default function App() {
               <br />
               Your crop and arrangement are kept when you export.
             </p>
-            <p className="mt-3 text-[12px] leading-relaxed text-[#9A9A93]">
+            <p className="mt-3 text-[12px] leading-relaxed text-[#6B6B63]">
               Everything is processed locally in your browser. No photo ever leaves this device (max 10MB each).
             </p>
-            <p className="mt-4 text-[11px] font-mono text-[#9A9A93]">
+            <p className="mt-4 text-[11px] font-mono text-[#6B6B63]">
               made with love by{' '}
               <a
                 href="https://imbe.net"
@@ -923,7 +913,7 @@ export default function App() {
             </p>
             <button
               onClick={handlePurgeHardRefresh}
-              className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-full border border-[#E8E5DE] bg-white px-3 py-2 text-[11px] font-medium text-[#9A9A93] hover:text-red-600 hover:border-red-200 hover:bg-red-50 transition-colors"
+              className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-full border border-[#E8E5DE] bg-white px-3 py-2 text-[11px] font-medium text-[#6B6B63] hover:text-red-600 hover:border-red-200 hover:bg-red-50 transition-colors"
             >
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
                 <path d="M3 12a9 9 0 1 0 2.64 -6.36" />
@@ -931,7 +921,7 @@ export default function App() {
               </svg>
               Purge cache & hard refresh
             </button>
-            <p className="mt-1 text-center text-[10px] font-mono text-[#B8B4A8]">use if page stuck after update</p>
+            <p className="mt-1 text-center text-[10px] font-mono text-[#6B6B63]">use if page stuck after update</p>
           </div>
         </div>
       )}
@@ -956,7 +946,7 @@ export default function App() {
               </div>
               <button
                 onClick={() => setShowUpdateBanner(false)}
-                className="grid h-7 w-7 shrink-0 place-items-center rounded-full text-[#9A9A93] hover:bg-[#EDE9E0] hover:text-[#2D2E26]"
+                className="grid h-7 w-7 shrink-0 place-items-center rounded-full text-[#6B6B63] hover:bg-[#EDE9E0] hover:text-[#2D2E26]"
                 aria-label="Dismiss"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -993,7 +983,7 @@ export default function App() {
                 Purge & hard refresh
               </button>
             </div>
-            <p className="mt-2 text-center text-[10px] font-mono text-[#9A9A93]">
+            <p className="mt-2 text-center text-[10px] font-mono text-[#6B6B63]">
               Old build will be purged from cache. Hard refresh loads the new one
             </p>
           </div>
