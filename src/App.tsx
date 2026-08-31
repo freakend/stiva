@@ -310,7 +310,7 @@ export default function App() {
                   </div>
 
                   <div>
-                    <label className="mb-1.5 block text-[12px] font-medium text-[#6B6B63]">Photos</label>
+                    <label className="mb-1.5 block text-[12px] font-medium text-[#2D2E26]">Photos</label>
                     <div className="flex rounded-full bg-[#EDE9E0] p-1 gap-1">
                       {PHOTO_OPTIONS.map(n => {
                         const active = n === count
@@ -320,7 +320,7 @@ export default function App() {
                             onClick={() => setCount(n as typeof count)}
                             className={[
                               'flex-1 rounded-full px-2 py-[7px] text-[13px] font-semibold leading-none transition-all',
-                              active ? 'bg-[#2D2E26] text-white shadow-sm' : 'text-[#6B6B63] hover:text-[#2D2E26]',
+                              active ? 'bg-[#2D2E26] text-white shadow-sm' : 'text-[#2D2E26] hover:text-black',
                             ].join(' ')}
                           >
                             {n}
@@ -331,7 +331,7 @@ export default function App() {
                   </div>
 
                   <div>
-                    <label className="mb-1.5 block text-[12px] font-medium text-[#6B6B63]">Orientation</label>
+                    <label className="mb-1.5 block text-[12px] font-medium text-[#2D2E26]">Orientation</label>
                     <div className="flex rounded-full bg-[#EDE9E0] p-1 gap-1">
                       {(['portrait', 'landscape'] as const).map(o => {
                         const active = o === orientation
@@ -341,7 +341,7 @@ export default function App() {
                             onClick={() => setOrientation(o)}
                             className={[
                               'flex-1 capitalize rounded-full px-2 py-[7px] text-[13px] font-semibold leading-none transition-all',
-                              active ? 'bg-[#2D2E26] text-white shadow-sm' : 'text-[#6B6B63] hover:text-[#2D2E26]',
+                              active ? 'bg-[#2D2E26] text-white shadow-sm' : 'text-[#2D2E26] hover:text-black',
                             ].join(' ')}
                           >
                             {o}
@@ -353,10 +353,14 @@ export default function App() {
 
                   <div>
                     <div className="mb-1.5 flex items-center justify-between">
-                      <label className="text-[12px] font-medium text-[#6B6B63]">Gap</label>
+                      <label htmlFor="gap-range" className="text-[12px] font-medium text-[#2D2E26]">
+                        Gap
+                      </label>
                       <span className="text-[11px] font-mono text-[#6B6B63]">{gap}px</span>
                     </div>
                     <input
+                      id="gap-range"
+                      aria-label="Gap between photos"
                       type="range"
                       min={0}
                       max={24}
@@ -579,7 +583,7 @@ export default function App() {
                 href="https://imbe.net"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#2D2E26] hover:underline"
+                className="text-[#2D2E26] underline underline-offset-2 decoration-[#2D2E26]/30 hover:decoration-[#2D2E26]"
               >
                 Imbe
               </a>
@@ -675,7 +679,7 @@ export default function App() {
                         onClick={() => setCount(n as typeof count)}
                         className={[
                           'flex-1 rounded-full px-2 py-[10px] text-[13px] font-semibold leading-none transition-all',
-                          active ? 'bg-[#2D2E26] text-white shadow-sm' : 'text-[#6B6B63] hover:text-[#2D2E26]',
+                          active ? 'bg-[#2D2E26] text-white shadow-sm' : 'text-[#2D2E26] hover:text-black',
                         ].join(' ')}
                       >
                         {n}
@@ -703,7 +707,7 @@ export default function App() {
                         onClick={() => setOrientation(o)}
                         className={[
                           'flex-1 rounded-full px-2 py-[10px] text-[13px] font-semibold leading-none capitalize transition-all',
-                          active ? 'bg-[#2D2E26] text-white shadow-sm' : 'text-[#6B6B63] hover:text-[#2D2E26]',
+                          active ? 'bg-[#2D2E26] text-white shadow-sm' : 'text-[#2D2E26] hover:text-black',
                         ].join(' ')}
                       >
                         {o}
@@ -721,6 +725,8 @@ export default function App() {
                 </div>
                 <input
                   autoFocus
+                  id="gap-range-mobile"
+                  aria-label="Gap between photos"
                   type="range"
                   min={0}
                   max={24}
@@ -906,7 +912,7 @@ export default function App() {
                 href="https://imbe.net"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#2D2E26] hover:underline"
+                className="text-[#2D2E26] underline underline-offset-2 decoration-[#2D2E26]/30 hover:decoration-[#2D2E26]"
               >
                 Imbe
               </a>
