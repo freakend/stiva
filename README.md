@@ -20,6 +20,10 @@ then export a PNG up to 3000px on the long edge.
 
 No accounts. No uploads. No tracking. Everything stays in your browser.
 
+<p align="center">
+  <img src="./public/lighthouse-banner.svg" alt="Lighthouse scores: Performance 99, Accessibility 100, Best Practices 100, SEO 100" width="800" />
+</p>
+
 </div>
 
 ---
