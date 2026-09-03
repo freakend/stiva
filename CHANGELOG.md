@@ -17,3 +17,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - PWA support: installable, offline-capable shell with service worker.
 - Mobile UI: Lightroom-style bottom toolbar with collapsible pickers.
 - Dark-accent light theme (cream / off-white), Space Grotesk + JetBrains Mono.
+- Lighthouse 99/100/100/100 banner (`public/lighthouse-banner.svg`) in README.
+
+### Fixed
+
+- Tap on a filled photo cell now opens the crop viewer bottom sheet instead of the Replace file picker.
+- Respect iOS safe area (`viewport-fit=cover`, `env(safe-area-inset-bottom)`) for bottom toolbar, picker, and crop sheet.
+- Improve text contrast to WCAG AA 4.5:1 (`#9A9A93` → `#6B6B63`, `#B8B4A8` → `#6B6B63`) and remove dark mode toggle.
+- Label Gap range inputs (`htmlFor`/`aria-label`) and make Imbe links always underlined; raise contrast of unselected Photo/Orientation segments (`#6B6B63` → `#2D2E26` on `#EDE9E0`).
+
+### Changed
+
+- Crop viewer is now a bottom sheet on mobile and a centered modal on desktop.
